@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<header>
+    <h1>Gestión de Usuarios</h1>
+    <h2>¡Ten tu libreta de contactos siempre a mano!</h2>
+</header>
+
+<ul>
+    <li><a routerLink="/">Inicio</a></li>
+    <li><a routerLink="/createUser">Crear Usuario</a></li>
+    <li><a routerLink="/listUsers">Historial</a></li>
+</ul>
+
+<form (ngSubmit)="crearUsuario()" #userForm="ngForm">
+    <div>
+        <input type="text" id="nombre" name="nombre" placeholder="Introduce tu nombre" [(ngModel)]="nuevoUsuario.nombre" required>
+        <input type="text" id="apellido" name="apellido" placeholder="Introduce tu apellido" [(ngModel)]="nuevoUsuario.apellido" required>
+        <input type="email" id="correo" name="correo" placeholder="Introduce tu correo electrónico" [(ngModel)]="nuevoUsuario.correo" required>
+    </div>
+    <div>
+        <label for="fechaNacimiento">Fecha de Nacimiento:  </label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento" [(ngModel)]="nuevoUsuario.fechaNacimiento" required>
+    </div>
+    <div>
+        <label for="admin">Administrador:  </label>
+        <input type="checkbox" id="admin" name="admin" [(ngModel)]="nuevoUsuario.admin">
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">Crear Usuario</button>
+</form>

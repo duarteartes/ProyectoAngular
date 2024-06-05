@@ -1,0 +1,63 @@
+* {
+    font-family: 'Titillium Web';
+}
+
+header {
+    background-color: #F4C844;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #00329F;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: white;
+    color: #404040;
+}
+
+#usuarios {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+    text-align: center;
+    margin: 50px auto;
+}
+
+#usuarios td, #usuarios th {
+    padding: 8px;
+}
+
+#usuarios tr:nth-child(even){background-color: #f2f2f2;}
+
+#usuarios tr:hover {background-color: #ddd;}
+
+#usuarios th {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color: #F4C844;
+    color: white;
+}

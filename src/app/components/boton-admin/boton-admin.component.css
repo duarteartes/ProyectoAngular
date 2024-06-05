@@ -1,0 +1,16 @@
+* {
+    font-family: 'Titillium Web';
+}
+button {
+    padding: 6px 10px;
+    background-color: #00329F;
+    color: white;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+button:active {
+    background-color: white;
+    color: #00329F;
+}

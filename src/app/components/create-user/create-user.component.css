@@ -1,0 +1,73 @@
+* {
+    font-family: 'Titillium Web';
+}
+
+header {
+    background-color: #F4C844;
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 50px;
+}
+
+h2 {
+    font-size: 25px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #00329F;
+    text-align: center;
+}
+
+li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: white;
+    color: #404040;
+}
+
+input[type=text], [type=email] {
+    width: 80%;
+    padding: 9px 20px;
+    margin-bottom: 10px;
+    border: 2px #00329F;
+    border-radius: 4px;
+}
+
+div {
+    padding: 9px;
+}
+
+form {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: #F4C844;
+}
+
+button {
+    width: 80%;
+    padding: 8px 10px;
+    background-color: #00329F;
+    color: white;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+button:active {
+    background-color: white;
+    color: #00329F;
+}

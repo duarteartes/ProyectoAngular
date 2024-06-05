@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<header>
+  <h1>Gestión de Usuarios</h1>
+  <h2>¡Ten tu libreta de contactos siempre a mano!</h2>
+</header>
+
+<ul>
+  <li><a routerLink="/">Inicio</a></li>
+  <li><a routerLink="/createUser">Crear Usuario</a></li>
+  <li><a routerLink="/listUsers">Historial</a></li>
+</ul>
+
+<table id="usuarios">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Correo</th>
+        <th>Edad</th>
+        <th>Administrador</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let usuario of usuarios; let i = index">
+        <td>{{ usuario.nombre }}</td>
+        <td>{{ usuario.apellido }}</td>
+        <td>{{ usuario.correo }}</td>
+        <td>{{ calcularEdad(usuario.fechaNacimiento) }}</td>
+        <td>
+          <input type="checkbox" [checked]="usuario.admin" disabled/>
+        </td>
+        <td>
+          <app-boton-admin [isAdmin]="usuario.admin" (toggleAdminEvent)="toggleAdmin(i)"></app-boton-admin>
+          <app-boton-borrar [usuarioId]="i" (eliminarUsuarioEvent)="eliminarUsuario(i)"></app-boton-borrar>
+        </td>
+      </tr>
+    </tbody>
+  </table>
